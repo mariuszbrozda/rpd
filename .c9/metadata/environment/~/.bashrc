@@ -1,0 +1,1 @@
+{"filter":false,"title":".bashrc","tooltip":"~/.bashrc","ace":{},"undoManager":{"mark":-1,"position":-1,"stack":[]},"timestamp":1567109523858,"hash":"3a8bbf97575f4e31829c88608f4c46bb84b44537"}
