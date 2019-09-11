@@ -1,1 +1,1 @@
-web: gunicorn rpd:app
+web: gunicorn rpd.wsgi:application
