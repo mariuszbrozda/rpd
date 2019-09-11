@@ -26,7 +26,7 @@ SECRET_KEY = '6m*l8ncd7w=(h0(1w&sp9fe(r6o8iz&1#p33i%9#xbj8%!^45p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aa98b2b377234be2ba8f1695bed247b8.vfs.cloud9.us-east-1.amazonaws.com']
+ALLOWED_HOSTS = ['aa98b2b377234be2ba8f1695bed247b8.vfs.cloud9.us-east-1.amazonaws.com', 'rpd-project.herokuapp.com']
 
 
 # Application definition
