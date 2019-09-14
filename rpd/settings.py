@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6m*l8ncd7w=(h0(1w&sp9fe(r6o8iz&1#p33i%9#xbj8%!^45p'
+SECRET_KEY = 'SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'rpd.wsgi.application'
 
 DATABASES = {'default': dj_database_url.parse("postgres://vnlrwcfishiznu:a7b2b0eab625415a2f04ed7fa11cf59daec4b74644625631fab39532a01a9614@ec2-54-195-252-243.eu-west-1.compute.amazonaws.com:5432/df3gk5trup85u3")}
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+ #   'default': {
+ #       'ENGINE': 'django.db.backends.sqlite3',
+ #       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 
 
 # Password validation
@@ -128,3 +128,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+
