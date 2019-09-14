@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from rpd_home.views import home_page
+from django.views import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', home_page, name="home_page"),
+    
 ]
