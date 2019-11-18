@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_forms_bootstrap',
     'rpd_home',
+    
 ]
 
 MIDDLEWARE = [
@@ -79,14 +81,14 @@ WSGI_APPLICATION = 'rpd.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {'default': dj_database_url.parse("postgres://vnlrwcfishiznu:a7b2b0eab625415a2f04ed7fa11cf59daec4b74644625631fab39532a01a9614@ec2-54-195-252-243.eu-west-1.compute.amazonaws.com:5432/df3gk5trup85u3")}
+#DATABASES = {'default': dj_database_url.parse("postgres://vnlrwcfishiznu:a7b2b0eab625415a2f04ed7fa11cf59daec4b74644625631fab39532a01a9614@ec2-54-195-252-243.eu-west-1.compute.amazonaws.com:5432/df3gk5trup85u3")}
 
-# DATABASES = {
- #   'default': {
- #       'ENGINE': 'django.db.backends.sqlite3',
- #       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+   }
+}
 
 
 # Password validation
@@ -125,12 +127,32 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
 
+STATICFILES_ROOT = 'static'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.EmailAuth'
+]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+DEFAULT_FROM_EMAIL = os.environ['DEFAULT_FROM_EMAIL']
+EMAIL_HOST_PASSWORD= os.environ['EMAIL_HOST_PASSWORD']
+
+
+
+
 

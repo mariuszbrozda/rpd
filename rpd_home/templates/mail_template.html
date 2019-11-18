@@ -1,0 +1,210 @@
+
+{% load staticfiles %}
+{% load bootstrap_tags %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>rpd</title>
+<!-- Font Awesome Icons -->
+<link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!-- Plugin CSS -->
+<link href="{% static 'magnific-popup.css' %}" rel="stylesheet">
+<!-- Theme CSS - Includes Bootstrap -->
+<link href="{% static 'css/creative.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/email_styles.css' %}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+<style type="text/css">
+body {margin: 0; padding: 0; min-width: 100%!important;}
+img {height: auto;}
+
+.content {width: 100%; max-width: 600px;}
+.header {padding: 40px 30px 20px 30px;}
+.innerpadding {padding: 30px 30px 30px 30px;}
+.innerpadding_td {padding: 10px 10px 10px 10px;}
+.borderbottom {border-bottom: 1px solid #f2eeed;}
+.subhead {font-size: 15px; color: #E3B217; font-family: sans-serif; letter-spacing: 10px;}
+.h1, .h2, .bodycopy {color: #153643; font-family: sans-serif;}
+.h1 {font-size: 33px; line-height: 38px; font-weight: bold;}
+.h2 {padding: 0 0 15px 0; font-size: 24px; line-height: 28px; font-weight: bold;}
+.bodycopy {font-size: 16px; line-height: 26px; font-weight: normal;}
+.button {text-align: center; font-size: 18px; font-family: sans-serif; font-weight: bold; padding: 0 30px 0 30px;}
+.button a {color: #ffffff; text-decoration: none;}
+.footer { padding: 30px 30px 15px 30px; margin: 0; background-color: black !important; text-align: center;}
+.footercopy {font-family: sans-serif; font-size: 14px; padding: 5px 10px 5px 5px; background-color: black !important;}
+.footercopy a {color: #ffffff; text-decoration: none; padding: 5px 10px 5px 5px;}
+@media only screen and (max-width: 550px), screen and (max-device-width: 550px) {
+  
+body[yahoo] .hide {display: none!important;}
+body[yahoo] .buttonwrapper {background-color: transparent!important;}
+body[yahoo] .button {padding: 0px!important;}
+body[yahoo] .button a {background-color: #effb41; padding: 15px 15px 13px!important;}
+body[yahoo] .unsubscribe {display: block; margin-top: 20px; padding: 10px 50px; background: #2f3942; border-radius: 5px; text-decoration: none!important; font-weight: bold;}
+}
+/*@media only screen and (min-device-width: 601px) {
+.content {width: 600px !important;}
+.col425 {width: 425px!important;}
+.col380 {width: 380px!important;}
+}*/
+</style>
+</head>
+<body yahoo bgcolor="#ffffff">
+  <table width="100%" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td></td>
+        <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td bgcolor="black" class="header">
+              <table width="70" align="left" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="70" style="padding: 0 20px 20px 0;">
+                    <img class="fix" src="/static/img/logo.png" width="75" height="75" style='border-radius: 50%' border="0 solid black" alt=""/>
+                  </td>
+                </tr>
+              </table>
+              <table class="col425" align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 425px;">
+                <tr>
+                  <td height="70">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="subhead" style="padding: 0 0 0 3px;">
+                         RPDecorators
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="h1"  style="padding: 5px 0 0 0; color:#E3B217">
+                         QUOTATION REQUEST
+                      </td>
+                    </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="innerpadding borderbottom">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="h2">
+                     Dear RPDecorators,
+                  </td>
+                </tr>
+                <tr>
+                  <td class="bodycopy" align="justify">
+                    {{full_name}} is requesting quotation for project. Find details below :
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td class="bodycopy" align="justify">
+                    COMMMENTS: {{comments}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="innerpadding_td borderbottom">
+              <table border='1px solid black' width="50%" align="left" float="left" border="0" cellpadding="0" cellspacing="0">
+                  
+                <tr>
+                  <td class="innerpadding_td borderbottom">Name</td>
+                  <td class="innerpadding_td borderbottom">{{full_name}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">Phone</td>
+                  <td class="innerpadding_td borderbottom">{{phone_number}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">Email adress</td>
+                  <td class="innerpadding_td borderbottom">{{from_email}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">Adress 1</td>
+                  <td class="innerpadding_td borderbottom">{{street_address1}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">Adress 2</td>
+                  <td class="innerpadding_td borderbottom">{{street_address2}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">County</td>
+                  <td class="innerpadding_td borderbottom">{{county}}</td>
+                </tr>
+              </table>
+              
+              
+              <table border='1px solid black' width="50%" float="right" align="center" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="innerpadding_td borderbottom">Postcode</td>
+                  <td class="innerpadding_td borderbottom">{{postcode}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">Town / City</td>
+                  <td class="innerpadding_td borderbottom">{{town_or_city}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">Property type</td>
+                  <td class="innerpadding_tdborderbottom">{{Property_type}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">Bedrooms nr</td>
+                  <td class="innerpadding_td borderbottom">{{Bedrooms_nr}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">Bathrooms nr</td>
+                  <td class="innerpadding_td borderbottom">{{Bathrooms_nr}}</td>
+                </tr>
+                <tr>
+                  <td class="innerpadding_td borderbottom">Thank you !</td>
+                  <td class="innerpadding_td borderbottom">:-)</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  
+  </table>
+  </td>
+</tr>
+</table>
+
+</body>
+
+<footer  class="footer" style='background-color: black !important; padding: 15px 0; marin: 0; width: 600px; margin: 0 auto;'>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+    <tr>
+      <td align="center" style='margin: 5px 5px;' class="footercopy">
+        <font color="#E3B217"> Phone: 085 8266 458</font><br/>
+        <a href="#" class="unsubscribe"><font color="#E3B217">RPDecorators website</font></a><br/>
+        <a class="d-block" href="mailto:rpd.decorators@gmail.com" width="100" height="40" alt="Twitter" border="0"><font color="#E3B217">rpd.decorators@gmail.com</font></a> 
+      </td>
+    </tr>
+    <tr>
+      <td align="center" style='margin: 0;' class="footercopy">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td  style="text-align: center; margin: 0;">
+                <font color="#E3B217" >Copyrights RPDecorators 2019 &copy;</font>
+              </td>
+            </tr>
+            </table>
+        </table>
+      </td>
+    </tr>
+  </table>
+</footer>
+
+</html>
