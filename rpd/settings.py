@@ -24,11 +24,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['aa98b2b377234be2ba8f1695bed247b8.vfs.cloud9.us-east-1.amazonaws.com', 'rpd-project.herokuapp.com']
+ALLOWED_HOSTS = [ os.environ["CLOUD9"] ]
 
-
+if os.environ.get('DEVELOPMENT'):
+    development = True
+else:
+    development = False
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
+    'dj_database_url',
     'rpd_home',
     
 ]
@@ -139,7 +143,12 @@ AUTHENTICATION_BACKENDS = [
     'accounts.backends.EmailAuth'
 ]
 
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
+ENV_PATH = os.path.abspath(os.path.dirname(__file__))
+STATIC_ROOT = os.path.join(ENV_PATH, '../public/static/') 
+MEDIA_ROOT = os.path.join(ENV_PATH, '../public/media/') 
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
